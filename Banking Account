@@ -47,15 +47,22 @@ if e2.is_active():
 
 # Constructor
 
-    class Shape:
-        __name = ""
-        __colour = ""
-        __visible = True
-
-        def __init__(self, name, colour=""):
-            self.__name = name
-            self.__colour = colour
-            self.__visible = True
+    class Account:
+        __chequing = ""
+        __Withdrawals_number = ""
+        __deposit_number = ""
+        __active= True
+        
+        __savings = ""
+        __Withdrawals_number = ""
+        __deposit_number = ""
+        __active = True
+        
+        def __init__(chequing, saving, Withdrawals, deppsit, active=""):
+            self.__name = chequing
+            self.__type = Withdrawals
+            self.__type = deposit
+            self.__active = True
 
         def get_name(self):
             return self.__name
@@ -64,37 +71,24 @@ if e2.is_active():
             self.__name = new_name
 
 
-    class Square(Shape):
-        height = 0.0
+    class chequing(account):
+    class saving(account):
+        Monthly_interest = 2.0
 
-        def area(self):
-            return self.height * self.height
+        def Monthly_interest(self):
+            return self.Balance * self.Monhtly_interest
 
-        def perimeter(self):
-            return self.height * 4
-
-        def __init__(self, name, colour, height):
-            super().__init__(name, colour)
-            self.height = height
-
-
-    class Rectangle(Square):
-        width = 0.0
-
-        def area(self):
-            return self.height * self.width
-
-        def perimeter(self):
-            return (self.height * 2) + (self.width * 2)
-
+    
 
     def main():
-        print("My main code goes here, my program starts here.")
-        # More statements....
+        print("My balance account of chequing and saving accounts.")
+       
 
-        square1 = Square("SQ1", "Red", 10.0)
+        account1 = account("account1", "type", 2.0)
+        account2 = account("account2", type, 2.0)
 
-        print("The area of this square is " + str(square1.area()))
+        print("My balance of accounts " + str(account1.type()))
+        print("My balance of accounts " + str(account2.type()))
 
 # Make Deposit
 
@@ -175,4 +169,5 @@ class Account:
     def get_balance(self):
         """Returns the current balance in the account."""
         return self.money
+
 
