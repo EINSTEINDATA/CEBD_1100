@@ -52,12 +52,12 @@ if e2.is_active():
         __Withdrawals_number = ""
         __deposit_number = ""
         __active= True
-        
+
         __savings = ""
         __Withdrawals_number = ""
         __deposit_number = ""
         __active = True
-        
+
         def __init__(chequing, saving, Withdrawals, deppsit, active=""):
             self.__name = chequing
             self.__type = Withdrawals
@@ -78,11 +78,11 @@ if e2.is_active():
         def Monthly_interest(self):
             return self.Balance * self.Monhtly_interest
 
-    
+
 
     def main():
         print("My balance account of chequing and saving accounts.")
-       
+
 
         account1 = account("account1", "type", 2.0)
         account2 = account("account2", type, 2.0)
@@ -170,4 +170,88 @@ class Account:
         """Returns the current balance in the account."""
         return self.money
 
+# STEP 3 Create a saving account whihc is a subclass of the abstract account class.
 
+# MakeWithdrawals
+
+
+class Account():
+
+    saving = ""
+    Withdrawals_number = 0
+    Active = False
+
+    def apply(self):
+
+        self.account_Active = False
+
+class Saving(Account):
+
+    Account = ""
+
+    def apply(self):
+
+        if self.Account == "":
+            self.account_Active = False
+        else:
+            super().apply()
+
+sa = Saving Account()
+sa.name = "Saving"
+gs.apply()
+
+# makeDeposit
+
+Class Account():
+
+    saving = ""
+    Withdrawals_number = 0
+    balance >= 25
+    Active = True
+
+    def apply(self):
+
+        self.account_balance >= 25
+
+class Saving(Account):
+
+    Account = ""
+
+    def apply(self):
+
+        if self.Account == "":
+            self.account_Active >= 25
+        else:
+            super().apply()
+
+sa = Saving Account()
+sa.name = "Saving"
+gs.apply()
+
+# doMonthlyReport
+
+# doMonthlyReport
+
+class Account:
+    def __init__(self, initial_balance):
+        """Creates Monthly report of Banking Information accounts."""
+        self.money = initial_balance
+        self.withdrawals >= 4
+        self.Service_charge = 1
+
+
+    def withdraw(self, amount):
+        """Each withdrawal, deposit, monthly service charge equal to zero"""
+
+        if  self.money >= 4
+            self.penalty = 1 * self.money
+
+        if self.balance <= 25
+            active = False
+        else:
+            self.money -= amount
+        return self.money
+
+    def get_balance(self):
+        """Returns the current balance in the account."""
+        return self.money
