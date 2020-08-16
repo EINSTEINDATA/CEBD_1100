@@ -1,0 +1,178 @@
+# STEP 1_ BANKING APPLICATION_ATTRIBUTES
+class Account:
+    chequing = ""
+    Withdrawals_number = 0
+    Deposit_number = 0
+    active = True
+
+class Account:
+    Saving = ""
+    Withdrawals_number = 0
+    Deposit_number = 0
+    active = True
+
+    def is_active(self):
+        return self.active
+
+class Annual_interest(Account):
+    Annual_interest = 2.00
+
+
+class Contractor(Account):
+    Annual_interest = 0.00
+
+
+e1 = Account()
+e1.name = "Chequing"
+e1.Annual_interest = 2.00
+e1.Service_charge = 3.00
+
+
+e2 = Account()
+e2.name = "Saving"
+e2.Annual_interest = 2.00
+e2.Service_charge = 3.00
+
+
+list_of_Account = [e1, e2]
+
+
+print(e2.name)
+print(list_of_Account[1].name)
+
+if e2.is_active():
+    print("The account " + e2.name + " IS active.")
+
+# STEP 2 Create an abstract base that defines the basic operations of the banking systems.
+
+# Constructor
+
+    class Shape:
+        __name = ""
+        __colour = ""
+        __visible = True
+
+        def __init__(self, name, colour=""):
+            self.__name = name
+            self.__colour = colour
+            self.__visible = True
+
+        def get_name(self):
+            return self.__name
+
+        def set_name(self, new_name):
+            self.__name = new_name
+
+
+    class Square(Shape):
+        height = 0.0
+
+        def area(self):
+            return self.height * self.height
+
+        def perimeter(self):
+            return self.height * 4
+
+        def __init__(self, name, colour, height):
+            super().__init__(name, colour)
+            self.height = height
+
+
+    class Rectangle(Square):
+        width = 0.0
+
+        def area(self):
+            return self.height * self.width
+
+        def perimeter(self):
+            return (self.height * 2) + (self.width * 2)
+
+
+    def main():
+        print("My main code goes here, my program starts here.")
+        # More statements....
+
+        square1 = Square("SQ1", "Red", 10.0)
+
+        print("The area of this square is " + str(square1.area()))
+
+# Make Deposit
+
+ def deposit(self):
+        amount = float(input("Enter your amount to be Deposited: >= 0"))
+        self.balance += amount
+        print("New Amount Deposit", amount)
+
+#makeWithdraw
+
+def withdraw(self):
+    amount = float(input("Enter your amount to be Withdrawn: "))
+    if self.balance >= amount:
+        self.balance -= amount
+        print("Your new account balance:", amount)
+    else:
+        print("Insufficient balance  ")
+
+#calculInterest
+#Monthly Interest rate = (Annual Interest Rate / 12)
+#Monthly Interest = Balance * Monthly Interest Rate
+#Balance = Balance + Monthyl Interest
+
+TAX_RATE = 2.00
+TIME (months) = 12
+
+def compound_interest(account, rate, time):
+    result = account * (compound_interest((1 + rate / 100), time))
+    return result
+
+a = float(input("Enter the balance account: "))
+r = float(input("Enter the interest rate: "))
+t = float(input("Enter the time in months: "))
+
+amount = compound_interest(p, r, t)
+interest = amount - p
+print("Compound amount is %.2f" % amount)
+print("Compound interest is %.2f" % interest)
+
+def add_tax(amount):
+    return amount * TAX_RATE
+
+
+def build_name(f_name: str, l_name: str):
+    return f_name + " " + l_name
+
+
+print("The amount 100 plus tax is " + str(add_tax(100)))
+
+
+print(build_name("Chequing", "Saving"))
+
+
+# doMonthlyReport
+
+class Account:
+    def __init__(self, initial_balance):
+        """Creates Monthly report of Banking Information accounts."""
+        self.money = initial_balance
+        self.Service_charge = 0
+
+    def deposit(self, amount):
+        """Deposits the amount into the account."""
+        self.money += amount = 0
+        return self.money
+
+    def withdraw(self, amount):
+        """Each withdrawal, deposit, monthly service charge equal to zero"""
+
+        if self.money - amount = 0:
+            self.money -= amount = 0
+            self.penalty = 0
+
+        else:
+            self.money -= amount
+        return self.money
+
+    def get_balance(self):
+        """Returns the current balance in the account."""
+        return self.money
+
