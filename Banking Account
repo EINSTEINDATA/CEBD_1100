@@ -17,9 +17,8 @@ class Account:
 class Annual_interest(Account):
     Annual_interest = 2.00
 
-
 class Contractor(Account):
-    Annual_interest = 0.00
+    Annual_interest = 2.00
 
 
 e1 = Account()
@@ -27,21 +26,17 @@ e1.name = "Chequing"
 e1.Annual_interest = 2.00
 e1.Service_charge = 3.00
 
-
 e2 = Account()
 e2.name = "Saving"
 e2.Annual_interest = 2.00
 e2.Service_charge = 3.00
 
-
 list_of_Account = [e1, e2]
 
-
 print(e2.name)
-print(list_of_Account[1].name)
-
+print(e1.name)
 if e2.is_active():
-    print("The account " + e2.name + " IS active.")
+    print("The accounts " + e2.name , e1.name + " are active.")
 
 # STEP 2 Create an abstract base that defines the basic operations of the banking systems.
 
@@ -58,7 +53,7 @@ if e2.is_active():
         __deposit_number = ""
         __active = True
 
-        def __init__(chequing, saving, Withdrawals, deppsit, active=""):
+        def __init__(chequing, saving, Withdrawals, deposit, active=""):
             self.__name = chequing
             self.__type = Withdrawals
             self.__type = deposit
@@ -78,11 +73,8 @@ if e2.is_active():
         def Monthly_interest(self):
             return self.Balance * self.Monhtly_interest
 
-
-
     def main():
         print("My balance account of chequing and saving accounts.")
-
 
         account1 = account("account1", "type", 2.0)
         account2 = account("account2", type, 2.0)
@@ -112,68 +104,34 @@ def withdraw(self):
 #Monthly Interest = Balance * Monthly Interest Rate
 #Balance = Balance + Monthyl Interest
 
-TAX_RATE = 2.00
-TIME (months) = 12
+rate = 2.00
+time_months = 12
 
-def compound_interest(account, rate, time):
-    result = account * (compound_interest((1 + rate / 100), time))
+def compound_interest(account, rate, time_months):
+    result = account * (compound_interest((1 + rate / 100), time_months))
     return result
 
 a = float(input("Enter the balance account: "))
 r = float(input("Enter the interest rate: "))
-t = float(input("Enter the time in months: "))
+t = float(input("Enter the time_months: "))
 
-amount = compound_interest(p, r, t)
-interest = amount - p
+amount = compound_interest(a, r, t)
+interest = amount - a
 print("Compound amount is %.2f" % amount)
 print("Compound interest is %.2f" % interest)
 
-def add_tax(amount):
-    return amount * TAX_RATE
-
+def add_rate(amount):
+    return amount * rate
 
 def build_name(f_name: str, l_name: str):
     return f_name + " " + l_name
 
-
-print("The amount 100 plus tax is " + str(add_tax(100)))
-
+print("The amount 100 plus rate is " + str(add_rate(100)))
 
 print(build_name("Chequing", "Saving"))
 
-
-# doMonthlyReport
-
-class Account:
-    def __init__(self, initial_balance):
-        """Creates Monthly report of Banking Information accounts."""
-        self.money = initial_balance
-        self.Service_charge = 0
-
-    def deposit(self, amount):
-        """Deposits the amount into the account."""
-        self.money += amount = 0
-        return self.money
-
-    def withdraw(self, amount):
-        """Each withdrawal, deposit, monthly service charge equal to zero"""
-
-        if self.money - amount = 0:
-            self.money -= amount = 0
-            self.penalty = 0
-
-        else:
-            self.money -= amount
-        return self.money
-
-    def get_balance(self):
-        """Returns the current balance in the account."""
-        return self.money
-
 # STEP 3 Create a saving account whihc is a subclass of the abstract account class.
-
 # MakeWithdrawals
-
 
 class Account():
 
@@ -255,3 +213,57 @@ class Account:
     def get_balance(self):
         """Returns the current balance in the account."""
         return self.money
+
+# STEP 4 Create a checking account class which is a subclass of the abstract account class
+# makeWithdraw
+Class Account():
+
+    chequing = ""
+    Withdrawals_number = 0
+    balance < 0
+    Active = True
+
+    def apply(self):
+
+        self.account_balance < 0
+        self.service_charge = 25
+
+class chequing(Account):
+
+    Account = ""
+
+    def apply(self):
+
+        if self.Account == "":
+            self.account_Active = False
+        else:
+            super().apply()
+
+ca = chequing Account()
+ca.name = "chequing"
+gs.apply()
+
+
+# doMontlyReport
+# STEP 5 BANKING ACCOUNT MENU
+
+class Bank_Account:
+    def __init__(self):
+        self.balance = 0
+        print("Welcome to the Deposit & Withdrawal Virtual Machine")
+
+    def deposit(self):
+        amount = float(input("Enter amount to be Deposited: "))
+        self.balance >= amount
+        print("Amount Deposited:", amount)
+
+    def withdraw(self):
+        amount = float(input("Enter amount to be Withdrawn: "))
+        if self.balance >= amount:
+            self.balance <= amount
+            print("You Withdrew:", amount)
+        else:
+            print("Insufficient balance  ")
+
+    def display(self):
+        print("Net Available Balance=", self.balance)
